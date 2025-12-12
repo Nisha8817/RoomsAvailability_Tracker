@@ -40,7 +40,7 @@ document.getElementById("loginForm").onsubmit = async (e) => {
 
     let fd = new FormData(e.target);
 
-    let res = await fetch("http://localhost:5000/auth/login", {
+    let res = await fetch("https://roomsavailabilitytracker.onrender.com", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
