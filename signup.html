@@ -60,7 +60,7 @@ document.getElementById("signupForm").onsubmit = async (e) => {
         password: fd.get("password")
     };
 
-    let res = await fetch("http://localhost:5000/auth/signup", {
+    let res = await fetch("https://roomsavailabilitytracker.onrender.com", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(body)
