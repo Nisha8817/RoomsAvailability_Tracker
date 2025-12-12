@@ -1,4 +1,4 @@
-const API = "http://localhost:5000";
+const API = "https://roomsavailabilitytracker.onrender.com";
 
 function convertToTimestamp(date, time) {
     // safety: if date or time missing, return empty
