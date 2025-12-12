@@ -1,0 +1,16 @@
+{
+  "name": "guesthouse-backend",
+  "version": "1.0.0",
+  "description": "Simple guest house booking backend (Express + SQLite)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.18.2",
+    "sqlite3": "^5.1.6"
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GuestHouse Admin - Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+    <div class="card p-4 shadow-lg" style="max-width: 420px; width: 100%;">
+        <h3 class="text-center mb-3" style="color:#1f6de0; font-weight: 700;">GuestHouse Admin</h3>
+        <p class="small-muted text-center">Create your owner account</p>
+
+        <form id="signupForm">
+            <div class="mb-3">
+                <label class="form-label">Guesthouse Name</label>
+                <input type="text" name="guesthouse" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Owner Name</label>
+                <input type="text" name="owner" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Owner Email</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Contact Number</label>
+                <input type="text" name="contact" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+
+            <button class="btn btn-primary w-100">Create Account</button>
+        </form>
+
+        <p class="text-center mt-3 small-muted">
+            Already have an account? <a href="login.html">Sign In</a>
+        </p>
+    </div>
+
+<script>
+document.getElementById("signupForm").onsubmit = async (e) => {
+    e.preventDefault();
+    let fd = new FormData(e.target);
+
+    let body = {
+        guesthouse: fd.get("guesthouse"),
+        owner: fd.get("owner"),
+        email: fd.get("email"),
+        contact: fd.get("contact"),
+        password: fd.get("password")
+    };
+
+    let res = await fetch("http://localhost:5000/auth/signup", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(body)
+    });
+
+    let data = await res.json();
+    alert(data.message);
+
+    if (res.ok) window.location.href = "login.html";
+};
+</script>
+
+</body>
+</html>

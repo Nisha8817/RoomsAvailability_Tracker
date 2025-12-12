@@ -1,0 +1,255 @@
+/* --------------------------
+SAPPHIRE ICE AESTHETIC THEME
+-------------------------- */
+
+body {
+    background: linear-gradient(135deg, #e9f4ff, #d2e9ff);
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1d2f45;
+    padding-bottom: 40px;
+}
+
+/* Page spacing */
+.page-section {
+    margin-top: 25px;
+}
+
+.small-muted {
+    color: #6c7e96;
+    font-size: 0.85rem;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* --------------------------
+SAPPHIRE COLOR VARIABLES
+-------------------------- */
+:root {
+    --sapphire: #3a8dff;
+    --sapphire-light: #7db9ff;
+    --sapphire-ice: #bfe0ff;
+    --ice-glow: 0 0 12px rgba(58, 141, 255, 0.55);
+    --ice-glow-big: 0 0 26px rgba(58, 141, 255, 0.35);
+}
+
+/* --------------------------
+BUTTONS — SAPPHIRE SHINE
+-------------------------- */
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--sapphire-light), var(--sapphire));
+    border: none;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: var(--ice-glow);
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--sapphire), #1f6de0);
+    box-shadow: var(--ice-glow-big);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #9fffd6, #5cd6a8);
+    border: none;
+    color: #003322;
+    font-weight: 600;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ff7676, #d63030);
+    border: none;
+    font-weight: 600;
+    color: white;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #fff0a6, #ffd655);
+    border: none;
+    color: #4f3a00;
+    font-weight: 600;
+}
+
+.btn-outline-primary {
+    border-color: var(--sapphire) !important;
+    color: var(--sapphire) !important;
+}
+.btn-outline-primary:hover {
+    background: var(--sapphire);
+    color: #fff !important;
+}
+
+/* --------------------------
+GLASS + ICE CARDS
+-------------------------- */
+
+.card,
+.card-3d {
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(18px);
+    border-radius: 16px;
+    border: 1px solid rgba(200,220,255,0.6);
+    box-shadow:
+        0 8px 25px rgba(160, 180, 215, 0.35),
+        0 0 22px rgba(58, 141, 255, 0.15);
+    transition: 0.3s ease;
+}
+
+.card:hover,
+.card-3d:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 14px 35px rgba(160, 180, 215, 0.45),
+        0 0 32px rgba(58, 141, 255, 0.25);
+}
+
+/* --------------------------
+STAT NUMBERS — Sapphire Glow
+-------------------------- */
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--sapphire-light), var(--sapphire));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: var(--ice-glow);
+}
+
+/* --------------------------
+TABLE DESIGN — Icy Blue Grid
+-------------------------- */
+
+table {
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    color: #1d2f45;
+}
+
+table thead th {
+    background: linear-gradient(135deg, var(--sapphire-ice), var(--sapphire-light));
+    font-weight: 600;
+    white-space: nowrap;
+    color: #173255;
+}
+
+table tbody tr:hover {
+    background: rgba(58, 141, 255, 0.15);
+    transform: scale(1.002);
+}
+
+/* --------------------------
+FORMS — Sapphire Frost Inputs
+-------------------------- */
+
+input, select {
+    background: rgba(255,255,255,0.75);
+    color: #173355;
+    border-radius: 10px !important;
+    border: 1px solid rgba(58,141,255,0.3) !important;
+    transition: 0.25s ease;
+}
+
+input:focus, select:focus {
+    border-color: var(--sapphire) !important;
+    box-shadow: 0 0 0 4px rgba(58,141,255,0.25) !important;
+}
+
+input::placeholder {
+    color: #7ba0c7 !important;
+}
+
+/* --------------------------
+AVAILABILITY CARDS — Soft Ice Glow
+-------------------------- */
+
+#availabilityResults .border {
+    background: rgba(255,255,255,0.75);
+    border-radius: 14px;
+    padding: 14px;
+    border: 1px solid rgba(58,141,255,0.25);
+    transition: 0.25s;
+}
+
+#availabilityResults .border:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--ice-glow-big);
+}
+
+/* --------------------------
+RESPONSIVE DESIGN
+-------------------------- */
+
+@media (max-width: 576px) {
+    .btn {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .row.g-3 > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .sticky-top {
+        position: relative !important;
+        top: unset !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    table td, table th {
+        white-space: nowrap !important;
+        font-size: 0.85rem;
+    }
+
+    #bookingTable,
+    #dashboardBookings {
+        display: block;
+        overflow-x: auto;
+    }
+}
+/* --------------------------
+NAVBAR — Sapphire Ice Header
+-------------------------- */
+
+.navbar {
+    background: linear-gradient(135deg, rgba(255,255,255,0.65), rgba(210,230,255,0.55)) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(150,180,220,0.4);
+    box-shadow: 0 4px 18px rgba(50,100,150,0.15);
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #3a8dff, #1f6de0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 12px rgba(58,141,255,0.35);
+}
+
+.nav-link {
+    color: #1c3b62 !important;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.nav-link:hover {
+    color: #3a8dff !important;
+    text-shadow: 0 0 10px rgba(58,141,255,0.35);
+    transform: translateY(-1px);
+}
