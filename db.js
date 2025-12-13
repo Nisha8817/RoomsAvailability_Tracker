@@ -18,17 +18,19 @@ db.serialize(() => {
     `);
 
     db.run(`
-        CREATE TABLE IF NOT EXISTS bookings (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            room TEXT,
-            name TEXT,
-            mobile TEXT,
-            advance INTEGER,
-            checkIn TEXT,
-            checkOut TEXT,
-            status TEXT
-        )
-    `);
+   CREATE TABLE IF NOT EXISTS bookings (
+        id TEXT PRIMARY KEY,
+        room TEXT,
+        name TEXT,
+        mobile TEXT,
+        advance INTEGER,
+        checkIn TEXT,
+        checkOut TEXT,
+        status TEXT
+   )
+`);
+
+
 });
 
 // ensure owners table exists
