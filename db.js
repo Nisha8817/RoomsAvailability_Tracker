@@ -27,7 +27,7 @@ db.serialize(() => {
         checkIn TEXT,
         checkOut TEXT,
         status TEXT
-   )
+   ) 
 `);
 
 
